@@ -18,16 +18,17 @@ def update (f,x):
     
     return f
 
-k=np.arange(0,n,1)
-
 
 
 for i in range (1,n):
     func[i]=update(func[i-1],x)
-    
-plt.scatter(k,func,marker='o', s=70)
+
+k=np.arange(0,n,1)
+
+plt.scatter(k,func,marker='*', s=70)
 plt.xlabel(r'$n$',fontsize=15)
-"""plt.ylabel(r'$f_')"""
+plt.ylabel(r'$f_{n}(x)$',fontsize=15)
+plt.axhline(y=np.sqrt(x),color='r',ls='--')
 
 a=np.array([1,0])
 b=np.array([0,1])
